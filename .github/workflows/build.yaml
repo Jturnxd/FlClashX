@@ -156,6 +156,7 @@ jobs:
 
   upload:
     permissions: write-all
+    if: ${{ always() }}
     needs: [ build ]
     runs-on: ubuntu-latest
     services:
